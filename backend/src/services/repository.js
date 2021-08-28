@@ -2,6 +2,7 @@ const User = require('../models/User');
 const Group = require('../models/Group');
 const Post = require('../models/Post');
 const Question = require('../models/Question');
+const Reply = require('../models/Reply');
 
 class Repository {
   createUser(email, passwordHash, firstName, lastName, displayName) {
@@ -91,6 +92,23 @@ class Repository {
       { _id: postId },
       { $addToSet: { questions: { $each: questionIds } } }
     );
+  }
+
+  async findReplies(postId, questionId) {
+    return Reply.find({ post: postId, question: questionId });
+  }
+
+  async createReply(user, postId, questionId, response) {
+    const existingReply = await Reply.findOne({ user: user._id, post: postId, question: questionId });
+    if (existingReply) {
+      console.log("Updating existing response");
+      return Reply.findOneAndUpdate(
+        { _id: existingReply._id },
+        { response: response }
+      );
+    } else {
+      return Reply.create({ user: user._id, post: postId, question: questionId, response });
+    }
   }
 }
 

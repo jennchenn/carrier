@@ -53,7 +53,6 @@ app.get('/post/:postId', post.find);
 app.get('/posts/:groupId', post.findByGroup);
 app.post('/post', post.create);
 app.put('/post/question', post.addQuestions);
-
-// app.get('post/reply/:postId/:questionId');
-// app.post('post/reply');
+app.get('/post/reply/:postId/:questionId', post.findReplies);
+app.post('/post/reply', authentication, post.createReply);
 module.exports = app;

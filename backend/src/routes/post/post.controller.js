@@ -20,6 +20,14 @@ class PostController {
   async addQuestions(postId, questionIds) {
     return this.repositoryService.addQuestionsToPost(postId, questionIds);
   }
+
+  async findReplies(postId, questionId) {
+    return this.repositoryService.findReplies(postId, questionId);
+  }
+
+  async createReply(user, postId, questionId, response) {
+    return this.repositoryService.createReply(user, postId, questionId, response);
+  }
 }
 
 module.exports = PostController;

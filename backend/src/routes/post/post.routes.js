@@ -37,3 +37,21 @@ exports.addQuestions = async (req, res) => {
     res.status(500).send({ message: err.toString() });
   }
 };
+
+exports.findReplies = async (req, res) => {
+  try {
+    const replies = await postController.findReplies(req.params.postId, req.params.questionId);
+    res.status(200).send(replies);
+  } catch (err) {
+    res.status(500).send({ message: err.toString() });
+  }
+};
+
+exports.createReply = async (req, res) => {
+  try {
+    const reply = await postController.createReply(req.user, req.body.postId, req.body.questionId, req.body.response);
+    res.status(200).send(reply);
+  } catch (err) {
+    res.status(500).send({ message: err.toString() });
+  }
+};
