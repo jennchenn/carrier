@@ -12,6 +12,10 @@ class GroupController {
   async find(id) {
     return this.repositoryService.findGroup(id);
   }
+
+  async invite(groupId, userId) {
+    return this.repositoryService.addUserToGroup(userId, groupId);
+  }
 }
 
 module.exports = GroupController;

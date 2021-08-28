@@ -44,7 +44,7 @@ app.post('/user/login', user.login);
 app.get('/user/info/:email', user.find);
 app.post('/group/create', authentication, group.create);
 app.get('/group/info/:id', group.find);
-// app.get('/group/invite/:id');
+app.post('/group/invite', group.invite);
 // app.get('/posts/:groupId');
 // app.get('post/:postId');
 // app.get('post/reply/:questionId');

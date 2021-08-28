@@ -25,3 +25,12 @@ exports.find = async (req, res) => {
     res.status(500).send({ message: err.toString() });
   }
 };
+
+exports.invite = async (req, res) => {
+  try {
+    const group = await groupController.invite(req.body.groupId, req.body.userId);
+    res.status(200).send(group);
+  } catch (err) {
+    res.status(500).send({ message: err.toString() });
+  }
+};
