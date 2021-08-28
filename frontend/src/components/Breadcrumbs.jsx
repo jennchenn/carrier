@@ -4,32 +4,32 @@ import { Link, withRouter } from "react-router-dom";
 function Breadcrumbs(props) {
     return (
         <div className="navigation">
-            <nav class="navbar navbar-expand navbar-dark bg-dark">
-                <div class="container">
+            <nav className="navbar navbar-expand navbar-dark bg-dark">
+                <div className="container">
                     <div>
-                        <ul class="navbar-nav ml-auto">
+                        <ul className="navbar-nav ml-auto">
                             <li
-                                class={`nav-item  ${props.location.pathname === "/" ? "Groups" : ""
+                                className={`nav-item  ${props.location.pathname === "/" ? "Groups" : ""
                                     }`}
                             >
-                                <Link class="nav-link" to="/">
+                                <Link className="nav-link" to="/">
                                     Groups
-                                    <span class="sr-only">(current)</span>
+                                    <span className="sr-only">(current)</span>
                                 </Link>
                             </li>
                             <li
-                                class={`nav-item  ${props.location.pathname === "/Groups/Group" ? "active" : ""
+                                className={`nav-item  ${props.location.pathname === "/Groups/Group" ? "active" : ""
                                     }`}
                             >
-                                <Link class="nav-link" to="/Groups/Group">
+                                <Link className="nav-link" to="/Groups/Group">
                                     / Group
                                 </Link>
                             </li>
                             <li
-                                class={`nav-item  ${props.location.pathname === "/Groups/Group/IssueMaker" ? "active" : ""
+                                className={`nav-item  ${props.location.pathname === "/Groups/Group/IssueMaker" ? "active" : ""
                                     }`}
                             >
-                                <Link class="nav-link" to="/Groups/Group/IssueMaker">
+                                <Link className="nav-link" to="/Groups/Group/IssueMaker">
                                     / IssueMaker
                                 </Link>
                             </li>

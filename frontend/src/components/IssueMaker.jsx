@@ -1,5 +1,7 @@
 import React from "react";
 
+import { getPost } from '../api/post';
+
 class IssueMaker extends React.Component {
     constructor(props) {
         super(props);
@@ -13,7 +15,13 @@ class IssueMaker extends React.Component {
         });
     }
 
+    getPost = async () => {
+        const post = await getPost("612a97ef3ee421234cf2d926");
+        console.log(post);
+    }
+
     onSavePost = event => {
+        this.getPost();
         event.preventDefault();
         alert('You have submitted the form.')
     }
