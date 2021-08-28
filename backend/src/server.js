@@ -8,6 +8,8 @@ const cors = require('cors');
 const health = require('./routes/health/health.routes');
 const user = require('./routes/user/user.routes');
 const group = require('./routes/group/group.routes');
+const post = require('./routes/post/post.routes');
+const question = require('./routes/question/question.routes');
 
 const authentication = require('./middleware/authentication');
 
@@ -45,8 +47,13 @@ app.get('/user/info/:email', user.find);
 app.post('/group/create', authentication, group.create);
 app.get('/group/info/:id', group.find);
 app.post('/group/invite', group.invite);
-// app.get('/posts/:groupId');
-// app.get('post/:postId');
-// app.get('post/reply/:questionId');
+app.get('/question/:id', question.find);
+app.post('/question', question.create);
+app.get('/post/:postId', post.find);
+app.get('/posts/:groupId', post.findByGroup);
+app.post('/post', post.create);
+app.put('/post/question', post.addQuestions);
+
+// app.get('post/reply/:postId/:questionId');
 // app.post('post/reply');
 module.exports = app;

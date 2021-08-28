@@ -1,5 +1,7 @@
 const User = require('../models/User');
 const Group = require('../models/Group');
+const Post = require('../models/Post');
+const Question = require('../models/Question');
 
 class Repository {
   createUser(email, passwordHash, firstName, lastName, displayName) {
@@ -33,6 +35,7 @@ class Repository {
       { $addToSet: { members: id } },
       { new: true }
     );
+    await this.addGroupToUser(id, groupId);
     return group;
   }
 
@@ -46,21 +49,47 @@ class Repository {
     return createdGroup;
   }
 
-  findGroup(id) {
+  async findGroup(id) {
     return Group.findById(id).populate('members');
   }
 
-
-
-
-  findUserById(id) {
-    return User.findById(id);
+  async addGroupToUser(id, groupId) {
+    return User.findOneAndUpdate(
+      { _id: id },
+      { $addToSet: { groups: groupId } }
+    );
   }
 
-  async addGroupToUser(email, groupId) {
-    return User.findOneAndUpdate(
-      { email: email },
-      { $addToSet: { groups: groupId } }
+  async findQuestion(id) {
+    return Question.findById(id);
+  }
+
+  async createQuestion(question, author) {
+    const createdQuestion = await Question.create({ question, author });
+    return createdQuestion;
+  }
+
+  async findPost(id) {
+    return Post.findById(id).populate('questions');
+  }
+
+  async findPostsByGroup(id) {
+    return Post.find({ group: id }).populate('questions');
+  }
+
+  async createPost(groupId, name) {
+    const post = {
+      group: groupId,
+      name: name
+    };
+    const createdPost = await Post.create(post);
+    return createdPost;
+  }
+
+  async addQuestionsToPost(postId, questionIds) {
+    return Post.findOneAndUpdate(
+      { _id: postId },
+      { $addToSet: { questions: { $each: questionIds } } }
     );
   }
 }

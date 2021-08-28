@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const postSchema = new mongoose.Schema({
     group: { type: mongoose.Schema.Types.ObjectId, ref: 'Group', required: true },
-    name: { type: String, required: True },
+    name: { type: String, required: true },
     questions: [
         {
             type: mongoose.Schema.Types.ObjectId,
