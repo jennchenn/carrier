@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import history from './history';
 
 
 class Groups extends React.Component {
@@ -13,8 +12,8 @@ class Groups extends React.Component {
                         <Button
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
-                            onClick={() => history.push("/Groups/bread")}
-                            children="GROUP1"
+                            onClick={() => window.location.href = "http://localhost:3000/Groups/TheBreadGang/Posts"}
+                            children="THE BREAD GANG"
                         />
                     </div>
                     <div class="col-md-4">
@@ -22,7 +21,7 @@ class Groups extends React.Component {
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
                             onClick={() => console.log("CLICKED")}
-                            children="GROUP2"
+                            children="THE BEES"
                         />
                     </div>
                     <div class="col-md-4">
@@ -30,7 +29,7 @@ class Groups extends React.Component {
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
                             onClick={() => console.log("CLICKED")}
-                            children="GROUP3"
+                            children="MY FAVS"
                         />
                     </div>
                 </div>
