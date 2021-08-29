@@ -35,7 +35,11 @@ app.use(
   cors({
     origin: 'http://localhost:3000',
     credentials: true,
-  })
+  },
+    {
+      origin: 'https://carrierpigeon.netlify.app',
+      credentials: true
+    })
 );
 app.use(cookieParser());
 
