@@ -10,7 +10,7 @@ class IssueMaker extends React.Component {
         this.state = { title: '', questions: [], postId: '612a97ef3ee421234cf2d926', token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJyZWFkMkBnbWFpbC5jb20iLCJfaWQiOiI2MTJhODE1YzRiM2M4YzQxYzA0MGRmODUiLCJpYXQiOjE2MzAxOTk5NzQsImV4cCI6MTYzMDI4NjM3NH0.me8isasI_KXhgGfLXMDXDDlb5tZCAizAuO70sI3v8Ek' };
     }
 
-    onTitleChange = (e, data) => {
+    onQuestionChange = (e, data) => {
         const { value } = data;
         this.setState({
             name: value,
