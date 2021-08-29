@@ -19,9 +19,9 @@ function Breadcrumbs(props) {
                     {props.location.pathname.includes("Posts") && <Breadcrumb.Item className="breadcrumb-item" href="/Groups/TheBreadGang/Posts">
                         Posts
                     </Breadcrumb.Item >}
-                    {props.location.pathname.includes("Aug28") && <Breadcrumb.Item href="Groups/TheBreadGang/Posts/Aug28">Aug 28</Breadcrumb.Item>}
-                    {props.location.pathname.includes("Aug29") && <Breadcrumb.Item href="Groups/TheBreadGang/Posts/Aug29">Aug 29</Breadcrumb.Item>}
-                    {props.location.pathname.includes("Edit") && <Breadcrumb.Item href="Groups/TheBreadGang/Posts/Aug29/Edit">Edit</Breadcrumb.Item>}
+                    {props.location.pathname.includes("Aug28") && <Breadcrumb.Item href="/Groups/TheBreadGang/Posts/Aug28">Aug 28</Breadcrumb.Item>}
+                    {props.location.pathname.includes("Aug29") && <Breadcrumb.Item href="/Groups/TheBreadGang/Posts/Aug29">Aug 29</Breadcrumb.Item>}
+                    {props.location.pathname.includes("Edit") && <Breadcrumb.Item href="/Groups/TheBreadGang/Posts/Aug29/Edit">Edit</Breadcrumb.Item>}
                 </Breadcrumb>
             </nav>
         </div>

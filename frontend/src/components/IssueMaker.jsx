@@ -56,6 +56,7 @@ class IssueMaker extends React.Component {
         return (
             <div className="container">
                 <h1 className="title">Add your reply!</h1>
+                <p className="maker-subtitle">This week's post will go out on Monday.</p>
                 <Form onSubmit={this.onSavePost}>
                     {questions}
                     <Button variant="primary" type="submit" className="issue-primary-btn">
