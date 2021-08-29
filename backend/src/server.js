@@ -33,14 +33,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: 'http://localhost:3000',
+    origin: ['http://localhost:3000', 'https://carrierpigeon.netlify.app'],
     credentials: true,
-  },
-    {
-      origin: 'https://carrierpigeon.netlify.app',
-      credentials: true
-    })
-);
+  }));
 app.use(cookieParser());
 
 // Routes
