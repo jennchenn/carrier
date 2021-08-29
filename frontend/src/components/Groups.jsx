@@ -13,8 +13,8 @@ class Groups extends React.Component {
                         <Button
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
-                            onClick={() => history.push("/Groups/Group")}
-                            children="GROUP1"
+                            onClick={() => window.location.href = "http://localhost:3000/Groups/TheBreadGang"}
+                            children="THE BREAD GANG"
                         />
                     </div>
                     <div class="col-md-4">
@@ -22,7 +22,7 @@ class Groups extends React.Component {
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
                             onClick={() => console.log("CLICKED")}
-                            children="GROUP2"
+                            children="THE BEES"
                         />
                     </div>
                     <div class="col-md-4">
@@ -30,7 +30,7 @@ class Groups extends React.Component {
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
                             onClick={() => console.log("CLICKED")}
-                            children="GROUP3"
+                            children="MY FAVS"
                         />
                     </div>
                 </div>
