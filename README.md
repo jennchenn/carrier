@@ -1,5 +1,7 @@
 # carrier
-technova 2021 submission!
+a newsletter by you, for you (brought to you by carrier pigeons). submitted to [technova 2021](https://devpost.com/software/carrier-pigeons)!
+
+![app demo](./assets/carrier.gif)
 
 ## Backend - Local Development
 1. Copy `.env.template`, rename to `.env` and populate with correct values
