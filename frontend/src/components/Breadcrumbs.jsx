@@ -26,10 +26,18 @@ function Breadcrumbs(props) {
                                 </Link>
                             </li>
                             <li
+                                className={`nav-item  ${props.location.pathname === "/Groups/Group/Posts" ? "active" : ""
+                                    }`}
+                            >
+                                <Link className="nav-link" to="/Groups/Group/Posts">
+                                    / Posts
+                                </Link>
+                            </li>
+                            <li
                                 className={`nav-item  ${props.location.pathname === "/Groups/Group/IssueMaker" ? "active" : ""
                                     }`}
                             >
-                                <Link className="nav-link" to="/Groups/Group/IssueMaker">
+                                <Link className="nav-link" to="/Groups/Group/Posts/IssueMaker">
                                     / IssueMaker
                                 </Link>
                             </li>

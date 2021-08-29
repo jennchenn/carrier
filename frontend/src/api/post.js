@@ -8,6 +8,13 @@ export async function getPost(postId) {
     return res.data;
 }
 
+export async function getPostsByGroup(groupId) {
+    const url = BACKEND_URL.concat('/posts/', groupId);
+    const res = await axios.get(url, { withCredentials: true });
+    return res.data;
+}
+
+
 export async function postReply(replyObj, token) {
     const url = BACKEND_URL.concat('/post/reply');
     const res = await axios.post(url, replyObj, {
@@ -17,3 +24,4 @@ export async function postReply(replyObj, token) {
     });
     return res.data;
 }
+
