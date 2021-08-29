@@ -7,3 +7,13 @@ export async function getPost(postId) {
     const res = await axios.get(url, { withCredentials: true });
     return res.data;
 }
+
+export async function postReply(replyObj, token) {
+    const url = BACKEND_URL.concat('/post/reply');
+    const res = await axios.post(url, replyObj, {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    });
+    return res.data;
+}
