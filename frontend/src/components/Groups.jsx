@@ -21,7 +21,7 @@ class Groups extends React.Component {
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
                             onClick={() => console.log("CLICKED")}
-                            children="THE BEES"
+                            children="THE HONEY BEES"
                         />
                     </div>
                     <div className="col-md-4">
@@ -29,7 +29,7 @@ class Groups extends React.Component {
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
                             onClick={() => console.log("CLICKED")}
-                            children="MY FAVS"
+                            children="MY FRIEND FAVS"
                         />
                     </div>
                 </div>

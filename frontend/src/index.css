@@ -41,7 +41,7 @@ h1,h4 {
   font-family:'Segoe UI'!important;
   font-size:32px!important;
   font-weight:bold!important;
-  text-align: left;
+  text-align: left!important;
   padding-left: 45px;
 }
 

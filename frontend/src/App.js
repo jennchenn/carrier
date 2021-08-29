@@ -9,9 +9,9 @@ function App() {
         <Breadcrumbs />
         <Switch>
           <Route path="/" exact component={() => <Groups />} />
-          <Route path="/Groups/:group/Posts" exact component={() => <Posts />} />
-          <Route path="/Groups/:group/Posts/Aug29/Edit" exact component={() => <IssueMaker />} />
-          <Route path="/Groups/:group/Posts/Aug28" exact component={() => <PastIssue />} />
+          <Route path="/Groups/TheBreadGang/Posts" exact component={() => <Posts />} />
+          <Route path="/Groups/TheBreadGang/Posts/Aug29/Edit" exact component={() => <IssueMaker />} />
+          <Route path="/Groups/TheBreadGang/Posts/Aug28" exact component={() => <PastIssue />} />
         </Switch>
       </Router>
     </div>
