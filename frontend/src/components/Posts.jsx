@@ -33,9 +33,9 @@ class Posts extends React.Component {
         this.state.posts.forEach((postObj) => {
             const date = new Date(postObj.createdAt);
             posts.push(
-                <div className="issue-card">
-                    <div className="card-title">
-                        <Link to="Posts/Post" params={{postId: postObj._id}}className="title">{postObj.name}</Link>
+                <div className="issue-card" key={postObj._id}>
+                    <div className="issue-card-title">
+                        <Link to="Posts/Aug28" params={{postId: postObj._id}}className="card-link">{postObj.name}</Link>
                         <p className="date">{`${date.getDate()}/${date.getMonth()+1}/${date.getFullYear()}`}</p>
                         </div>
                     <div className="card-body">
