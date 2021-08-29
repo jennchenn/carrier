@@ -13,7 +13,7 @@ class Groups extends React.Component {
                         <Button
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
-                            onClick={() => history.push("/Groups/Group")}
+                            onClick={() => history.push("/Groups/bread")}
                             children="GROUP1"
                         />
                     </div>
