@@ -33,7 +33,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(
   cors({
-    origin: ['http://localhost:3000', 'https://carrierpigeon.netlify.app'],
+    origin: ['http://localhost:3000', 'https://carrierpigeon.netlify.app', 'https://www.carryperrypigeons.online'],
     credentials: true,
   }));
 app.use(cookieParser());
