@@ -7,21 +7,34 @@ class Groups extends React.Component {
 
     render() {
         return (
-            <div>
-                <Button
-                    style={{ height: '100px', width: '100px' }}
-                    onClick={() => history.push('/Group/Groups')}
-                    children="GROUP1"
-                />
-                <Button
-                    onClick={() => console.log("CLICKED")}
-                    children="GROUP2"
-                />
-                <Button
-                    onClick={() => console.log("CLICKED")}
-                    children="GROUP3"
-                />
-            </div>
+            <div class="container-fluid" id="center-row">
+                <div class="row">
+                    <div class="col-md-4">
+                        <Button
+                            id="group-button"
+                            style={{ height: '200px', width: '200px' }}
+                            onClick={() => history.push("/Groups/Group")}
+                            children="GROUP1"
+                        />
+                    </div>
+                    <div class="col-md-4">
+                        <Button
+                            id="group-button"
+                            style={{ height: '200px', width: '200px' }}
+                            onClick={() => console.log("CLICKED")}
+                            children="GROUP2"
+                        />
+                    </div>
+                    <div class="col-md-4">
+                        <Button
+                            id="group-button"
+                            style={{ height: '200px', width: '200px' }}
+                            onClick={() => console.log("CLICKED")}
+                            children="GROUP3"
+                        />
+                    </div>
+                </div>
+            </div >
         )
     }
 }
