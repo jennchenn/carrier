@@ -9,7 +9,7 @@ import './IssueMaker.css';
 class IssueMaker extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { title: '', questions: [], postId: '612a97ef3ee421234cf2d926', token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJyZWFkMkBnbWFpbC5jb20iLCJfaWQiOiI2MTJhODE1YzRiM2M4YzQxYzA0MGRmODUiLCJpYXQiOjE2MzAxOTk5NzQsImV4cCI6MTYzMDI4NjM3NH0.me8isasI_KXhgGfLXMDXDDlb5tZCAizAuO70sI3v8Ek' };
+        this.state = { title: '', questions: [], postId: '612a97ef3ee421234cf2d926', token: process.env.REACT_APP_AUTH_TOKEN };
     }
 
     onQuestionChange = (e, data) => {
