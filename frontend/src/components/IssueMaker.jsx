@@ -4,6 +4,8 @@ import { Button, Form } from 'react-bootstrap';
 
 import { getPost, postReply } from '../api/post';
 
+import './IssueMaker.css';
+
 class IssueMaker extends React.Component {
     constructor(props) {
         super(props);
@@ -45,16 +47,16 @@ class IssueMaker extends React.Component {
         const questions = [];
 
         this.state.questions.forEach((questionObj) => {
-            questions.push(<Form.Group className="mb-3" controlId={questionObj._id} key={questionObj._id}>
+            questions.push(<Form.Group className="mb-3 question" controlId={questionObj._id} key={questionObj._id}>
             <Form.Label>{questionObj.question}</Form.Label>
-            <Form.Control as="textarea" rows={3} />
+            <Form.Control as="textarea" rows={5} className="input" />
         </Form.Group>);
         });
         
         return (
-            <div>
-                <h1>Post Maker</h1>
-                <Form onSubmit={this.onSavePost} id="wrap">
+            <div className="container">
+                <h1 className="title">Add your reply!</h1>
+                <Form onSubmit={this.onSavePost}>
                     {questions}
                     <Button variant="primary" type="submit" className="primary-btn">
                         Submit

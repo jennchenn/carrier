@@ -1,0 +1,33 @@
+.container {
+    width: 80%;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-family: -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.title {
+    font-size: 28px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.primary-btn {
+    margin:0 auto;
+    display: block;
+    background-color: #555B8F;
+    font-family: -apple-system, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 200px;
+    margin-top: 50px;
+}
+
+.question {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.input {
+    border: 3px solid #FFFFFF;
+    box-sizing: border-box;
+    box-shadow: 12px 12px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
