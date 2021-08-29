@@ -8,7 +8,7 @@ function App() {
       <Router>
         <Breadcrumbs />
         <Switch>
-          <Route path="/" exact component={() => <Groups />} />
+          <Route path="/Groups" exact component={() => <Groups />} />
           <Route path="/Groups/TheBreadGang/Posts" exact component={() => <Posts />} />
           <Route path="/Groups/TheBreadGang/Posts/Aug29/Edit" exact component={() => <IssueMaker />} />
           <Route path="/Groups/TheBreadGang/Posts/Aug28" exact component={() => <PastIssue />} />

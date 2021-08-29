@@ -12,7 +12,7 @@ function Breadcrumbs(props) {
             <img src={logo} alt="carrier logo" className="carrier-logo"/>
             <nav className="navbar">
                 <Breadcrumb className="breadcrumb">
-                    <Breadcrumb.Item className="breadcrumb-item" href="/">Groups</Breadcrumb.Item>
+                    <Breadcrumb.Item className="breadcrumb-item" href="/Groups">Groups</Breadcrumb.Item>
                     {props.location.pathname.includes("TheBreadGang") && <Breadcrumb.Item href="/Groups/TheBreadGang">
                         The Bread Gang
                     </Breadcrumb.Item>}
