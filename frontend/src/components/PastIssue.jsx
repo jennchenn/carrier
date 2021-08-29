@@ -13,7 +13,7 @@ class PastIssue extends React.Component {
                 <div>
                     <div class="card" >
                         <div class="card-header">
-                            <h2><a class="card-title">What bread did you eat today?</a></h2>
+                            <h2><p class="card-title">What bread did you eat today?</p></h2>
                         </div>
                         <div class="card-body">
                             <p class="card-text"><strong>Pidgey: </strong>I had some plain white bread today -
@@ -26,14 +26,14 @@ class PastIssue extends React.Component {
                                 to cool so I can have it with dinner!</p>
                             <div class="container">
                                 {/* <img class="bread-img" src="bread.jpg"></img> */}
-                                <img class="bread-img" src="https://milkandpop.com/wp-content/uploads/2021/01/sourdough-artisan-bread-baked-without-a-dutch-oven.jpg"></img>
+                                <img class="bread-img" src="https://milkandpop.com/wp-content/uploads/2021/01/sourdough-artisan-bread-baked-without-a-dutch-oven.jpg" alt="bread"></img>
                             </div>
                         </div>
                     </div>
 
                     <div class="card" >
                         <div class="card-header">
-                            <h2><a class="card-title">Share your favourite bread recipe!</a></h2>
+                            <h2><p class="card-title">Share your favourite bread recipe!</p></h2>
                         </div>
                         <div class="card-body">
                             <p class="card-text"><strong>Kiwi: </strong> This link is my favourite banana bread recipe: </p>
@@ -47,7 +47,7 @@ class PastIssue extends React.Component {
 
                     <div class="card" >
                         <div class="card-header">
-                            <h2><a class="card-title">Good places to fly to?</a></h2>
+                            <h2><p class="card-title">Good places to fly to?</p></h2>
                         </div>
                         <div class="card-body">
                             <p class="card-text"><strong>Tweety: </strong>I love flying over the East Coast! The air is so mild and

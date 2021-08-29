@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { Breadcrumbs, Groups, Group, IssueMaker, Posts, PastIssue } from "./components";
+import { Breadcrumbs, Groups, IssueMaker, Posts, PastIssue } from "./components";
 
 function App() {
   return (
