@@ -10,7 +10,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={() => <Groups />} />
           <Route path="/Groups/:group/Posts" exact component={() => <Posts />} />
-          <Route path="/Groups/:group/Posts/IssueMaker" exact component={() => <IssueMaker />} />
+          <Route path="/Groups/:group/Posts/Aug29/Edit" exact component={() => <IssueMaker />} />
           <Route path="/Groups/:group/Posts/Aug28" exact component={() => <PastIssue />} />
         </Switch>
       </Router>

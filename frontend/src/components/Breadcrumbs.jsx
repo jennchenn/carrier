@@ -1,49 +1,28 @@
 import React from "react";
-import { Link, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
+import { Breadcrumb } from 'react-bootstrap';
+
+import logo from '../assets/carrier.png'
+
+import './Breadcrumbs.css';
 
 function Breadcrumbs(props) {
     return (
         <div className="navigation">
-            <nav className="navbar navbar-expand navbar-dark bg-dark">
-                <div className="container">
-                    <div>
-                        <ul className="navbar-nav ml-auto">
-                            <li
-                                className={`nav-item  ${props.location.pathname === "/" ? "Groups" : ""
-                                    }`}
-                            >
-                                <Link className="nav-link" to="/">
-                                    Groups
-                                    <span className="sr-only">(current)</span>
-                                </Link>
-                            </li>
-                            <li
-                                className={`nav-item  ${props.location.pathname === "/Groups/Group" ? "active" : ""
-                                    }`}
-                            >
-                                <Link className="nav-link" to="/Groups/Group">
-                                    / Group
-                                </Link>
-                            </li>
-                            <li
-                                className={`nav-item  ${props.location.pathname === "/Groups/Group/Posts" ? "active" : ""
-                                    }`}
-                            >
-                                <Link className="nav-link" to="/Groups/Group/Posts">
-                                    / Posts
-                                </Link>
-                            </li>
-                            <li
-                                className={`nav-item  ${props.location.pathname === "/Groups/Group/IssueMaker" ? "active" : ""
-                                    }`}
-                            >
-                                <Link className="nav-link" to="/Groups/Group/Posts/IssueMaker">
-                                    / IssueMaker
-                                </Link>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+            <img src={logo} alt="carrier logo" className="carrier-logo"/>
+            <nav className="navbar">
+                <Breadcrumb className="breadcrumb">
+                    <Breadcrumb.Item className="breadcrumb-item" href="/">Groups</Breadcrumb.Item>
+                    {props.location.pathname.includes("TheBreadGang") && <Breadcrumb.Item href="/Groups/TheBreadGang">
+                        The Bread Gang
+                    </Breadcrumb.Item>}
+                    {props.location.pathname.includes("Posts") && <Breadcrumb.Item className="breadcrumb-item" href="/Groups/TheBreadGang/Posts">
+                        Posts
+                    </Breadcrumb.Item >}
+                    {props.location.pathname.includes("Aug28") && <Breadcrumb.Item href="Groups/TheBreadGang/Posts/Aug28">Aug 28</Breadcrumb.Item>}
+                    {props.location.pathname.includes("Aug29") && <Breadcrumb.Item href="Groups/TheBreadGang/Posts/Aug29">Aug 29</Breadcrumb.Item>}
+                    {props.location.pathname.includes("Edit") && <Breadcrumb.Item href="Groups/TheBreadGang/Posts/Aug29/Edit">Edit</Breadcrumb.Item>}
+                </Breadcrumb>
             </nav>
         </div>
     );

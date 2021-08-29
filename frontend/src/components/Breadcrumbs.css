@@ -1,0 +1,19 @@
+.breadcrumb {
+    background-color: #EDF3FD;
+    margin-bottom: 0;
+}
+
+.breadcrumb-item a {
+    color: #E39B8C;
+}
+
+.carrier-logo {
+    width: 135px;
+    height: 56px;
+    margin-top: 20px;
+    margin-left: 35px;
+}
+
+.navbar {
+    margin-bottom: 0;
+}

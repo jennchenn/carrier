@@ -36,7 +36,6 @@ h1,h4 {
 }
 
 #group-button {
-  #group-button {
   background-color: #7BA0CF !important;
   border-color: #7BA0CF !important;
   font-family:'Segoe UI'!important;
@@ -44,8 +43,6 @@ h1,h4 {
   font-weight:bold!important;
   text-align: left;
   padding-left: 45px;
-}
-
 }
 
 Button {

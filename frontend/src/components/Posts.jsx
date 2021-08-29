@@ -1,6 +1,5 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import history from './history';
 import { Link } from 'react-router-dom';
 
 import { getPostsByGroup } from '../api/post';
@@ -25,7 +24,7 @@ class Posts extends React.Component {
     }
 
     handleClickNewPost = () => {
-        history.push('/Groups/Group/Posts/New');
+        window.location.href = '/Groups/TheBreadGang/Posts/Aug29/Edit';
     }
 
     render() {
@@ -48,7 +47,7 @@ class Posts extends React.Component {
                 <div className="header">
                     <div className="header-title">POSTS</div>
                     <Button variant="primary" type="submit" className="primary-btn" onClick={this.handleClickNewPost}>
-                        New Post
+                        Edit Current Post
                     </Button>
                 </div>
                 {posts}

@@ -6,17 +6,17 @@ class Groups extends React.Component {
 
     render() {
         return (
-            <div class="container-fluid" id="center-row">
-                <div class="row">
-                    <div class="col-md-4">
+            <div className="container-fluid" id="center-row">
+                <div className="row">
+                    <div className="col-md-4">
                         <Button
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
-                            onClick={() => window.location.href = "http://localhost:3000/Groups/TheBreadGang/Posts"}
+                            onClick={() => window.location.href = "/Groups/TheBreadGang/Posts"}
                             children="THE BREAD GANG"
                         />
                     </div>
-                    <div class="col-md-4">
+                    <div className="col-md-4">
                         <Button
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
@@ -24,7 +24,7 @@ class Groups extends React.Component {
                             children="THE BEES"
                         />
                     </div>
-                    <div class="col-md-4">
+                    <div className="col-md-4">
                         <Button
                             id="group-button"
                             style={{ height: '200px', width: '200px' }}
