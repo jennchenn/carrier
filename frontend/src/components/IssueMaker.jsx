@@ -58,7 +58,7 @@ class IssueMaker extends React.Component {
                 <h1 className="title">Add your reply!</h1>
                 <Form onSubmit={this.onSavePost}>
                     {questions}
-                    <Button variant="primary" type="submit" className="primary-btn">
+                    <Button variant="primary" type="submit" className="issue-primary-btn">
                         Submit
                     </Button>
                 </Form>
